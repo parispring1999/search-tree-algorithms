@@ -1,7 +1,5 @@
 #   queen_cover.py
 #   by Alejandro Pascual San Roman
-#   Student ID: 201255350
-#
 #  Specification of queen domination problem
 #  In a queen domination puzzle, the minimum number of queens have to be placed in a m * n
 #  chess board so that all rows, columns and diagonals are controlled or occupied by a queen

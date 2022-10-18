@@ -1,7 +1,5 @@
 #   queue_search.py
 #   by Alejandro Pascual San Roman
-#   Student ID: 201255350
-#
 #   Problem solver using queue-based search algorithms
 
 from __future__ import print_function  # Imports print() function
