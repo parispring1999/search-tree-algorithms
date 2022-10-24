@@ -1,13 +1,6 @@
-#   queen_cover.py
-#   by Alejandro Pascual San Roman
-#  Specification of queen domination problem
-#  In a queen domination puzzle, the minimum number of queens have to be placed in a m * n
-#  chess board so that all rows, columns and diagonals are controlled or occupied by a queen
-
 #  import print() and deepcopy() functions
 from __future__ import print_function
 from copy import deepcopy
-
 
 # Representation of a state:
 # (number_controlled_squares, list_controlled_squares, (current_x_pos, current_y_pos),  full_board_state)
@@ -27,7 +20,6 @@ from copy import deepcopy
 # [*,*,*,*],
 # [*,*,*,0],
 # [*,0,*,0]
-
 
 # Defines the initial state: all values are empty
 def qc_get_initial_state(x, y):

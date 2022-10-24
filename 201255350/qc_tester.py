@@ -1,7 +1,3 @@
-## Test file for coursework 1
-
-import sys
-from tree          import *
 from queue_search  import *
 from queen_cover  import *
 
