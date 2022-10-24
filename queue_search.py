@@ -74,7 +74,7 @@ def search(problem, strategy, max_nodes, options):
     print("*** starting search ***")
 
     # Record starting time to keep track of time taken to solve
-    start_time = time.clock()
+    start_time = time.process_time()
 
     # Creates initial node
     node_queue = get_initial_node_queue(initial_state)
@@ -120,7 +120,7 @@ def search(problem, strategy, max_nodes, options):
             print_action_list(action_path)
             print("Path length = " + str(len(action_path)))
             print("Total nodes tested = " + str(nodes_tested + 1))
-            print("Time taken =", time.clock() - start_time, "seconds\n")
+            print("Time taken =", time.process_time() - start_time, "seconds\n")
             return action_path
 
         # Expand current node and move children to queue
@@ -130,7 +130,7 @@ def search(problem, strategy, max_nodes, options):
     # If number of nodes in max_nodes is expanded without finding a solution, print the following:
     print("\n:-( <FAILURE> )-:")
     print("Search aborted --- node limit reached (MAX_NODES=%i)\n" % max_nodes)
-    print("Time taken =", time.clock() - start_time, "seconds\n")
+    print("Time taken =", time.process_time() - start_time, "seconds\n")
     return False
 
 
