@@ -89,10 +89,8 @@ def queen_diagonal(x, y):
 
 def qc_test_goal_state(state):
     if state[0] == BOARD_X * BOARD_Y:
-        print("\nGOAL STATE:")
+        print("\n棋盘可视化:")
         print_board_state(state)
-        print("\nThe minimum number of queens to cover a ", BOARD_X, "*", BOARD_Y,
-              " chessboard is equal to the \"Path Length\" below:")
         return True
     return False
 
@@ -106,8 +104,7 @@ def print_board_state(state):
 
 
 def qc_problem_info():
-    print("\nQueen Domination Problem (", BOARD_X, "x", BOARD_Y, "board):")
-    print("What is the minimum number of queens required to control this ", BOARD_X, "*", BOARD_Y, " board?\n")
+    print("\n皇后占用棋盘问题",BOARD_X, "×", BOARD_Y)
 
 
 def empty_squares_heuristic(state):

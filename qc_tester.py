@@ -2,7 +2,7 @@ from queue_search import *
 from queen_cover import *
 
 original = sys.stdout
-sys.stdout = open('tester_outcome.txt', 'w')
+sys.stdout = open('tester_result.txt', 'w')
 
 
 def zero_heuristic(state):
