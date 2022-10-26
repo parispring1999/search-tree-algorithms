@@ -15,7 +15,7 @@ def matrix_of_zeros(x_value, y_value):
     return [[0 for x in range(x_value)] for y in range(y_value)]
 
 
-# Goes through the array and counts all squares with a 0 on them
+# 遍历数组和计数
 def qc_possible_actions(state):
     moves = []
     for x in range(BOARD_X):
@@ -35,7 +35,7 @@ def qc_successor_state(action, state):
     return control_count, control_list, (x_position, y_position), board
 
 
-# Outputs the list of controlled and occupied squares by a queen
+# 占用方格
 def controlled_squares_list(x, y):
     row = queen_row(y)
     column = queen_column(x)
@@ -58,29 +58,26 @@ def queen_column(x):
     return column
 
 
-# Calculate all squares controlled in diagonal by a queen in (x, y)
 def queen_diagonal(x, y):
-    diagonal_left_right = []  # Diagonal that goes from up left to down right
-    diagonal_right_left = []  # Diagonal that goes from up right to down left
+    diagonal_left_right = []  # 左上到右下的斜线↘
+    diagonal_right_left = []  # 右上到左下↙
 
-    # Initial position for left-to-right diagonal (as up and left as possible)
+    # 起始值
     min_left_right = min(x, y)
     x_left_right = x - min_left_right
     y_left_right = y - min_left_right
 
-    # Initial position for right-to-left diagonal (as up and right as possible)
-    x_difference = (BOARD_X - 1) - x  # Difference between x position of the queen and most right x border of the board
+    x_difference = (BOARD_X - 1) - x
     min_right_left = min(x_difference, y)
     x_right_left = x + min_right_left
     y_right_left = y - min_right_left
 
-    # Count squares in the left-to-right diagonal
+    # 计算方格数↘和↙
     while x_left_right < BOARD_X and y_left_right < BOARD_Y:
         diagonal_left_right += [(x_left_right, y_left_right)]
         x_left_right += 1
         y_left_right += 1
 
-    # Count squares in the right-to-left diagonal
     while x_right_left >= 0 and y_right_left < BOARD_Y:
         diagonal_right_left += [(x_right_left, y_right_left)]
         x_right_left += -1
@@ -113,17 +110,16 @@ def qc_problem_info():
     print("What is the minimum number of queens required to control this ", BOARD_X, "*", BOARD_Y, " board?\n")
 
 
-# Heuristic
 def empty_squares_heuristic(state):
     return BOARD_X * BOARD_Y - state[0]
 
 
-# Return the problem specification for a given board size
+# 创建一个函数把search的参数导入
 def make_qc_problem(x, y):
     global BOARD_X, BOARD_Y, qc_initial_state
     BOARD_X = x
     BOARD_Y = y
-    qc_initial_state = qc_get_initial_state(x, y)
+    qc_initial_state = qc_get_initial_state(x, y)  # 从零开始
     return (None,
             qc_problem_info,
             qc_initial_state,
