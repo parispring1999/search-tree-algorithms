@@ -25,6 +25,7 @@ def dongzuo(zt):
     return yd
 
 
+# 下一个queen
 def jiren(dz, zt):
     board = deepcopy(zt[3])
     x_position = dz[0]
