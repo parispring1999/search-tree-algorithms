@@ -1,7 +1,3 @@
-#   queue_search.py
-#   by Alejandro Pascual San Roman
-#   Problem solver using queue-based search algorithms
-
 from __future__ import print_function  # Imports print() function
 
 from random import *  # Used for randomised depth first search
@@ -49,8 +45,6 @@ print("Loading queue_search.py")
 
 # Main function (used by user)
 def search(problem, strategy, max_nodes, options):
-    print("======= Running Python Queue-Based Search Procedure =======")
-    print("===== by: Alejandro Pascual San Roman, SID: 201255350 =====")
 
     initialise_func = problem[0]
     problem_info_func = problem[1]

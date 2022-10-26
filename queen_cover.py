@@ -1,25 +1,7 @@
-#  import print() and deepcopy() functions
+# 包含包和模块
 from __future__ import print_function
 from copy import deepcopy
 
-# Representation of a state:
-# (number_controlled_squares, list_controlled_squares, (current_x_pos, current_y_pos),  full_board_state)
-# So on a 4x4 board after placing two queens we might have a state such as:
-#
-# (13, [(0, 0), (1, 0), (2, 0), (3, 0),
-#       (0, 1), (1, 1), (2, 1), (3, 1),
-#       (0, 2), (1, 2), (2, 2),
-#       (0, 3)          (2, 3)          ], (1,0), [[0,0,1,0],
-#                                                  [1,0,0,0],
-#                                                  [0,0,0,0],
-#                                                  [0,0,0,0]] )
-#
-# Since the queens are controlling 13 squares (the ones marked with an asterisk as follows):
-#
-# [*,*,*,*],
-# [*,*,*,*],
-# [*,*,*,0],
-# [*,0,*,0]
 
 # Defines the initial state: all values are empty
 def qc_get_initial_state(x, y):

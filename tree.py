@@ -1,8 +1,3 @@
-# tree.py
-# by Alejandro Pascual San Roman
-# Tree data structure
-# Each node takes the form:
-# [parent_node, list_of_child_nodes, [action_path, state, cost, heuristic_value]]
 
 print("Loading tree.py")
 
