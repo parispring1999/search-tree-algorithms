@@ -27,12 +27,12 @@ def dongzuo(zt):
 
 # 下一个queen
 def jiren(dz, zt):
-    board = deepcopy(zt[3])
+    b = deepcopy(zt[3])
     x_position = dz[0]
     y_position = dz[1]
     control_list = list(dict.fromkeys(zt[1] + controlled_squares_list(x_position, y_position)))
     control_count = len(control_list)
-    board[y_position][x_position] = 1
+    b[y_position][x_position] = 1
     return control_count, control_list, (x_position, y_position), board
 
 
