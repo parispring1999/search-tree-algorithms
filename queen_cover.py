@@ -4,23 +4,23 @@ from copy import deepcopy
 
 
 # 空值
-def qc_get_initial_state(x, y):
-    global BOARD_X, BOARD_Y, qc_initial_state
-    BOARD_X = x
-    BOARD_Y = y
-    return 0, [], (0, 0), matrix_of_zeros(x, y)
+def chushi(x, y):
+    global xbian, ybian, chushizhi
+    xbian = x
+    ybian = y
+    return 0, [], (0, 0), ling(x, y)
 
 
-def matrix_of_zeros(x_value, y_value):
-    return [[0 for x in range(x_value)] for y in range(y_value)]
+def ling(x1, y1):
+    return [[0 for x in range(x1)] for y in range(y1)]
 
 
 # 遍历数组和计数
-def qc_possible_actions(state):
+def dongzuo(a):
     moves = []
-    for x in range(BOARD_X):
-        for y in range(BOARD_Y):
-            if state[3][y][x] == 0:
+    for x in range(xbian):
+        for y in range(ybian):
+            if a[3][y][x] == 0:
                 moves = moves + [(x, y)]
     return moves
 
@@ -46,14 +46,14 @@ def controlled_squares_list(x, y):
 
 def queen_row(y):
     row = []
-    for x in range(BOARD_X):
+    for x in range(xbian):
         row = row + [(x, y)]
     return row
 
 
 def queen_column(x):
     column = []
-    for y in range(BOARD_Y):
+    for y in range(ybian):
         column = column + [(x, y)]
     return column
 
@@ -67,18 +67,18 @@ def queen_diagonal(x, y):
     x_left_right = x - min_left_right
     y_left_right = y - min_left_right
 
-    x_difference = (BOARD_X - 1) - x
+    x_difference = (xbian - 1) - x
     min_right_left = min(x_difference, y)
     x_right_left = x + min_right_left
     y_right_left = y - min_right_left
 
     # 计算方格数↘和↙
-    while x_left_right < BOARD_X and y_left_right < BOARD_Y:
+    while x_left_right < xbian and y_left_right < ybian:
         diagonal_left_right += [(x_left_right, y_left_right)]
         x_left_right += 1
         y_left_right += 1
 
-    while x_right_left >= 0 and y_right_left < BOARD_Y:
+    while x_right_left >= 0 and y_right_left < ybian:
         diagonal_right_left += [(x_right_left, y_right_left)]
         x_right_left += -1
         y_right_left += 1
@@ -88,7 +88,7 @@ def queen_diagonal(x, y):
 
 
 def qc_test_goal_state(state):
-    if state[0] == BOARD_X * BOARD_Y:
+    if state[0] == xbian * ybian:
         print("\n棋盘:")
         print_board_state(state)
         return True
@@ -104,23 +104,23 @@ def print_board_state(state):
 
 
 def qc_problem_info():
-    print("占用", BOARD_X, "×", BOARD_Y, "棋盘:")
+    print("占用", xbian, "×", ybian, "棋盘:")
 
 
 def empty_squares_heuristic(state):
-    return BOARD_X * BOARD_Y - state[0]
+    return xbian * ybian - state[0]
 
 
 # 创建一个函数把search的参数导入
 def make_qc_problem(x, y):
-    global BOARD_X, BOARD_Y, qc_initial_state
-    BOARD_X = x
-    BOARD_Y = y
-    qc_initial_state = qc_get_initial_state(x, y)  # 从零开始
+    global xbian, ybian, chushizhi
+    xbian = x
+    ybian = y
+    chushizhi = chushi(x, y)  # 从零开始
     return (None,
             qc_problem_info,
-            qc_initial_state,
-            qc_possible_actions,
+            chushizhi,
+            dongzuo,
             qc_successor_state,
             qc_test_goal_state
             )
