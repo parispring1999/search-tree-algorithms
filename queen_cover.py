@@ -16,20 +16,20 @@ def ling(x1, y1):
 
 
 # 遍历数组和计数
-def dongzuo(a):
+def dongzuo(zt):
     yd = []
     for x in range(xbian):
         for y in range(ybian):
-            if a[3][y][x] == 0:
+            if zt[3][y][x] == 0:
                 yd = yd + [(x, y)]
     return yd
 
 
-def jiren(dz, a):
-    board = deepcopy(a[3])
+def jiren(dz, zt):
+    board = deepcopy(zt[3])
     x_position = dz[0]
     y_position = dz[1]
-    control_list = list(dict.fromkeys(a[1] + controlled_squares_list(x_position, y_position)))
+    control_list = list(dict.fromkeys(zt[1] + controlled_squares_list(x_position, y_position)))
     control_count = len(control_list)
     board[y_position][x_position] = 1
     return control_count, control_list, (x_position, y_position), board
