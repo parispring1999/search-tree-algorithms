@@ -17,19 +17,19 @@ def ling(x1, y1):
 
 # 遍历数组和计数
 def dongzuo(a):
-    moves = []
+    yd = []
     for x in range(xbian):
         for y in range(ybian):
             if a[3][y][x] == 0:
-                moves = moves + [(x, y)]
-    return moves
+                yd = yd + [(x, y)]
+    return yd
 
 
-def qc_successor_state(action, state):
-    board = deepcopy(state[3])
-    x_position = action[0]
-    y_position = action[1]
-    control_list = list(dict.fromkeys(state[1] + controlled_squares_list(x_position, y_position)))
+def jiren(dz, a):
+    board = deepcopy(a[3])
+    x_position = dz[0]
+    y_position = dz[1]
+    control_list = list(dict.fromkeys(a[1] + controlled_squares_list(x_position, y_position)))
     control_count = len(control_list)
     board[y_position][x_position] = 1
     return control_count, control_list, (x_position, y_position), board
@@ -121,6 +121,6 @@ def make_qc_problem(x, y):
             qc_problem_info,
             chushizhi,
             dongzuo,
-            qc_successor_state,
+            jiren,
             qc_test_goal_state
             )
