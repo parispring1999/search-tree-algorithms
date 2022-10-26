@@ -3,7 +3,7 @@ from __future__ import print_function
 from copy import deepcopy
 
 
-# Defines the initial state: all values are empty
+# 空值
 def qc_get_initial_state(x, y):
     global BOARD_X, BOARD_Y, qc_initial_state
     BOARD_X = x
