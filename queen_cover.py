@@ -89,7 +89,7 @@ def queen_diagonal(x, y):
 
 def qc_test_goal_state(state):
     if state[0] == BOARD_X * BOARD_Y:
-        print("\n棋盘可视化:")
+        print("\n棋盘:")
         print_board_state(state)
         return True
     return False
@@ -104,7 +104,7 @@ def print_board_state(state):
 
 
 def qc_problem_info():
-    print("\n皇后占用棋盘问题",BOARD_X, "×", BOARD_Y)
+    print("占用", BOARD_X, "×", BOARD_Y, "棋盘:")
 
 
 def empty_squares_heuristic(state):

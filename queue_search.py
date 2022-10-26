@@ -87,7 +87,7 @@ def search(problem, strategy, max_nodes, options):
             sys.stdout.flush()  # flush output to force immediate printing
 
         if not node_queue:  # if node_queue is empty
-            print("\n:-( <FAILURE> )-:")
+            print(":-( <FAILURE> )-:")
             print("The entire search space was searched --- this problem has NO SOLUTION!")
             print("Total nodes tested = " + str(nodes_tested + 1))
             print("Time taken =", time.clock() - start_time, "seconds\n")
@@ -109,7 +109,7 @@ def search(problem, strategy, max_nodes, options):
         # If first node on queue is equal to goal state, print solution
         if goal_test_func(node_get_state(first_node)):
             action_path = node_get_path(first_node)
-            print("\n:-)) *SUCCESS* ((-:")
+            print(":-)) *SUCCESS* ((-:")
             print("The action path to the solution is:")
             print_action_list(action_path)
             print("Path length = " + str(len(action_path)))

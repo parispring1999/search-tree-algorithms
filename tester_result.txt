@@ -1,13 +1,11 @@
-
-皇后占用棋盘问题 1 × 1
-Strategy: ('A_star', <function zero_heuristic at 0x000002A8C44FF0D0>)
+占用 1 × 1 棋盘:
+Strategy: ('A_star', <function zero_heuristic at 0x000001D3F416F0D0>)
 Search Limit: max_nodes = 5000
 Options: []
 *** starting search ***
 0  
-可视化:
+棋盘:
   1
-
 :-)) *SUCCESS* ((-:
 The action path to the solution is:
 (0, 0)
@@ -15,18 +13,16 @@ Path length = 1
 Total nodes tested = 2
 Time taken = 0.0 seconds
 
-
-皇后占用棋盘问题 3 × 3
-Strategy: ('A_star', <function zero_heuristic at 0x000002A8C44FF0D0>)
+占用 3 × 3 棋盘:
+Strategy: ('A_star', <function zero_heuristic at 0x000001D3F416F0D0>)
 Search Limit: max_nodes = 5000
 Options: []
 *** starting search ***
 0  
-可视化:
+棋盘:
   0  0  0
   0  1  0
   0  0  0
-
 :-)) *SUCCESS* ((-:
 The action path to the solution is:
 (1, 1)
@@ -34,122 +30,110 @@ Path length = 1
 Total nodes tested = 6
 Time taken = 0.0 seconds
 
-
-皇后占用棋盘问题 4 × 4
-Strategy: ('A_star', <function zero_heuristic at 0x000002A8C44FF0D0>)
+占用 4 × 4 棋盘:
+Strategy: ('A_star', <function zero_heuristic at 0x000001D3F416F0D0>)
 Search Limit: max_nodes = 5000
 Options: []
 *** starting search ***
 0  
-可视化:
+棋盘:
   1  0  0  0
   0  0  0  0
   0  0  1  0
   0  0  0  0
-
 :-)) *SUCCESS* ((-:
 The action path to the solution is:
 (0, 0), (2, 2)
 Path length = 2
 Total nodes tested = 23
-Time taken = 0.03125 seconds
+Time taken = 0.015625 seconds
 
-
-皇后占用棋盘问题 5 × 5
-Strategy: ('A_star', <function zero_heuristic at 0x000002A8C44FF0D0>)
+占用 5 × 5 棋盘:
+Strategy: ('A_star', <function zero_heuristic at 0x000001D3F416F0D0>)
 Search Limit: max_nodes = 5000
 Options: []
 *** starting search ***
 0  
-可视化:
+棋盘:
   1  0  0  0  0
   0  0  0  0  0
   0  0  1  0  0
   0  0  0  0  0
   0  0  0  0  1
-
 :-)) *SUCCESS* ((-:
 The action path to the solution is:
 (4, 4), (0, 0), (2, 2)
 Path length = 3
 Total nodes tested = 638
-Time taken = 3.078125 seconds
+Time taken = 3.375 seconds
 
-
-皇后占用棋盘问题 5 × 6
-Strategy: ('A_star', <function zero_heuristic at 0x000002A8C44FF0D0>)
+占用 5 × 6 棋盘:
+Strategy: ('A_star', <function zero_heuristic at 0x000001D3F416F0D0>)
 Search Limit: max_nodes = 5000
 Options: []
 *** starting search ***
 0  
-可视化:
+棋盘:
   0  0  0  0  0
   0  0  0  0  0
   1  0  0  1  0
   0  0  0  0  0
   0  0  0  0  0
   0  0  0  0  1
-
 :-)) *SUCCESS* ((-:
 The action path to the solution is:
 (4, 5), (0, 2), (3, 2)
 Path length = 3
 Total nodes tested = 966
-Time taken = 20.5 seconds
+Time taken = 19.328125 seconds
 
-
-皇后占用棋盘问题 6 × 5
-Strategy: ('A_star', <function zero_heuristic at 0x000002A8C44FF0D0>)
+占用 6 × 5 棋盘:
+Strategy: ('A_star', <function zero_heuristic at 0x000001D3F416F0D0>)
 Search Limit: max_nodes = 5000
 Options: []
 *** starting search ***
 0  
-可视化:
+棋盘:
   0  0  0  0  0  0
   1  0  0  1  0  0
   0  0  0  0  0  0
   0  0  0  0  0  0
   0  0  0  0  0  1
-
 :-)) *SUCCESS* ((-:
 The action path to the solution is:
 (5, 4), (0, 1), (3, 1)
 Path length = 3
 Total nodes tested = 942
-Time taken = 14.4375 seconds
+Time taken = 14.5 seconds
 
-
-皇后占用棋盘问题 10 × 3
-Strategy: ('A_star', <function zero_heuristic at 0x000002A8C44FF0D0>)
+占用 10 × 3 棋盘:
+Strategy: ('A_star', <function zero_heuristic at 0x000001D3F416F0D0>)
 Search Limit: max_nodes = 5000
 Options: []
 *** starting search ***
 0  
-可视化:
+棋盘:
   1  0  0  0  0  0  0  0  0  0
   0  0  0  0  0  0  0  0  0  1
   0  0  0  0  0  0  0  0  0  1
-
 :-)) *SUCCESS* ((-:
 The action path to the solution is:
 (9, 2), (0, 0), (9, 1)
 Path length = 3
 Total nodes tested = 902
-Time taken = 4.421875 seconds
+Time taken = 4.046875 seconds
 
-
-皇后占用棋盘问题 3 × 4
-Strategy: ('A_star', <function zero_heuristic at 0x000002A8C44FF0D0>)
+占用 3 × 4 棋盘:
+Strategy: ('A_star', <function zero_heuristic at 0x000001D3F416F0D0>)
 Search Limit: max_nodes = 5000
 Options: []
 *** starting search ***
 0  
-可视化:
+棋盘:
   1  0  0
   0  0  0
   0  0  0
   0  0  1
-
 :-)) *SUCCESS* ((-:
 The action path to the solution is:
 (0, 0), (2, 3)
@@ -157,14 +141,13 @@ Path length = 2
 Total nodes tested = 14
 Time taken = 0.0 seconds
 
-
-皇后占用棋盘问题 4 × 7
-Strategy: ('A_star', <function zero_heuristic at 0x000002A8C44FF0D0>)
+占用 4 × 7 棋盘:
+Strategy: ('A_star', <function zero_heuristic at 0x000001D3F416F0D0>)
 Search Limit: max_nodes = 5000
 Options: []
 *** starting search ***
 0  
-可视化:
+棋盘:
   0  0  0  0
   1  0  0  0
   0  0  0  0
@@ -172,22 +155,20 @@ Options: []
   0  0  1  0
   0  0  0  0
   0  0  0  1
-
 :-)) *SUCCESS* ((-:
 The action path to the solution is:
 (3, 6), (0, 1), (2, 4)
 Path length = 3
 Total nodes tested = 820
-Time taken = 8.953125 seconds
+Time taken = 8.171875 seconds
 
-
-皇后占用棋盘问题 2 × 50
-Strategy: ('A_star', <function zero_heuristic at 0x000002A8C44FF0D0>)
+占用 2 × 50 棋盘:
+Strategy: ('A_star', <function zero_heuristic at 0x000001D3F416F0D0>)
 Search Limit: max_nodes = 5000
 Options: []
 *** starting search ***
 0  
-可视化:
+棋盘:
   1  0
   0  0
   0  0
@@ -238,11 +219,10 @@ Options: []
   0  0
   0  0
   0  1
-
 :-)) *SUCCESS* ((-:
 The action path to the solution is:
 (0, 0), (1, 49)
 Path length = 2
 Total nodes tested = 102
-Time taken = 1.890625 seconds
+Time taken = 1.84375 seconds
 
