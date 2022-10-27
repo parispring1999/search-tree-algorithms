@@ -84,7 +84,7 @@ def q_xie(x, y):
         x_pie += -1
         y_pie += 1
 
-    xie = list(dict.fromkeys(na + pie))  # Remove duplicate squares
+    xie = list(dict.fromkeys(na + pie))
     return xie
 
 
