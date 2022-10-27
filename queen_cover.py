@@ -2,7 +2,6 @@
 from __future__ import print_function
 from copy import deepcopy
 
-
 # 空值
 def chushi(x, y):
     global xbian, ybian, chushizhi
