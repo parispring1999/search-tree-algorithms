@@ -88,6 +88,7 @@ def q_xie(x, y):
     return 斜
 
 
+#检测是否覆盖
 def jiance(zt):
     if zt[0] == xbian * ybian:
         print("\n棋盘:")
@@ -96,6 +97,7 @@ def jiance(zt):
     return False
 
 
+#打印棋盘
 def dayin(zt):
     for h in zt[3]:
         for g in h:
@@ -103,6 +105,7 @@ def dayin(zt):
         print()
 
 
+#打印信息
 def dayinxinxi():
     print("占用", xbian, "×", ybian, "棋盘:")
 
