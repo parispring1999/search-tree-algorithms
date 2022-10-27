@@ -26,7 +26,7 @@ def dongzuo(zt):
 
 
 # 下一个queen
-def jiren(dz, zt):
+def jirenzhe(dz, zt):
     b = deepcopy(zt[3])
     xge = dz[0]
     yge = dz[1]
@@ -84,32 +84,27 @@ def q_xie(x, y):
         x_pie += -1
         y_pie += 1
 
-    xie = list(dict.fromkeys(na + pie))
-    return xie
+    斜 = list(dict.fromkeys(na + pie))
+    return 斜
 
 
-def qc_test_goal_state(state):
-    if state[0] == xbian * ybian:
+def jiance(zt):
+    if zt[0] == xbian * ybian:
         print("\n棋盘:")
-        print_board_state(state)
+        dayin(zt)
         return True
     return False
 
 
-def print_board_state(state):
-    board = state[3]
-    for row in board:
-        for square in row:
-            print(" %2i" % square, end='')
+def dayin(zt):
+    for h in zt[3]:
+        for g in h:
+            print("%-3i" % g, end='')
         print()
 
 
-def qc_problem_info():
+def dayinxinxi():
     print("占用", xbian, "×", ybian, "棋盘:")
-
-
-def empty_squares_heuristic(state):
-    return xbian * ybian - state[0]
 
 
 # 创建一个函数把search的参数导入
@@ -118,10 +113,4 @@ def make_qc_problem(x, y):
     xbian = x
     ybian = y
     chushizhi = chushi(x, y)  # 从零开始
-    return (None,
-            qc_problem_info,
-            chushizhi,
-            dongzuo,
-            jiren,
-            qc_test_goal_state
-            )
+    return None, dayinxinxi, chushizhi, dongzuo, jirenzhe, jiance

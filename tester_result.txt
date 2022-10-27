@@ -1,15 +1,32 @@
 ’º”√ 1 °¡ 1 ∆Â≈Ã:
-Strategy: ('A_star', <function zero_heuristic at 0x000001F17764F0D0>)
+Strategy: ('A_star', <function zero_heuristic at 0x000001DAC738F0D0>)
 Search Limit: max_nodes = 5000
 Options: []
 *** starting search ***
 0  
 ∆Â≈Ã:
-  1
+1  
 :-)) *SUCCESS* ((-:
 The action path to the solution is:
 (0, 0)
 Path length = 1
 Total nodes tested = 2
+Time taken = 0.0 seconds
+
+’º”√ 3 °¡ 3 ∆Â≈Ã:
+Strategy: ('A_star', <function zero_heuristic at 0x000001DAC738F0D0>)
+Search Limit: max_nodes = 5000
+Options: []
+*** starting search ***
+0  
+∆Â≈Ã:
+0  0  0  
+0  1  0  
+0  0  0  
+:-)) *SUCCESS* ((-:
+The action path to the solution is:
+(1, 1)
+Path length = 1
+Total nodes tested = 6
 Time taken = 0.0 seconds
 
