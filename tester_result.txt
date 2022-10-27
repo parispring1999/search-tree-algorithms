@@ -1,5 +1,5 @@
 ’º”√ 1 °¡ 1 ∆Â≈Ã:
-Strategy: ('A_star', <function zero_heuristic at 0x000001E4CDF4F0D0>)
+Strategy: ('A_star', <function zero_heuristic at 0x000001F17764F0D0>)
 Search Limit: max_nodes = 5000
 Options: []
 *** starting search ***

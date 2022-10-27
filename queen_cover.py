@@ -28,64 +28,64 @@ def dongzuo(zt):
 # 下一个queen
 def jiren(dz, zt):
     b = deepcopy(zt[3])
-    xweizhi = dz[0]
-    yweizhi = dz[1]
-    li = list(dict.fromkeys(zt[1] + controlled_squares_list(xweizhi, yweizhi)))
+    xge = dz[0]
+    yge = dz[1]
+    li = list(dict.fromkeys(zt[1] + kongzhiqu(xge, yge)))
     num = len(li)
-    b[yweizhi][xweizhi] = 1
-    return num, li, (xweizhi, yweizhi), b
+    b[yge][xge] = 1
+    return num, li, (xge, yge), b
 
 
 # 占用方格
-def controlled_squares_list(x, y):
-    row = queen_row(y)
-    column = queen_column(x)
-    diagonal = queen_diagonal(x, y)
-    squares_list = list(dict.fromkeys(row + column + diagonal))  # To remove duplicate squares
-    return squares_list
+def kongzhiqu(x, y):
+    h = q_heng(y)
+    z = q_zong(x)
+    xie = q_xie(x, y)
+    li = list(dict.fromkeys(h + z + xie))
+    return li
 
 
-def queen_row(y):
-    row = []
+def q_heng(y):
+    h = []
     for x in range(xbian):
-        row = row + [(x, y)]
-    return row
+        h = h + [(x, y)]
+    return h
 
 
-def queen_column(x):
-    column = []
+def q_zong(x):
+    z = []
     for y in range(ybian):
-        column = column + [(x, y)]
-    return column
+        z = z + [(x, y)]
+    return z
 
 
-def queen_diagonal(x, y):
-    diagonal_left_right = []  # 左上到右下的斜线↘
-    diagonal_right_left = []  # 右上到左下↙
+def q_xie(x, y):
+    na = []  # 左上到右下的斜线↘
+    pie = []  # 右上到左下↙
 
     # 起始值
-    min_left_right = min(x, y)
-    x_left_right = x - min_left_right
-    y_left_right = y - min_left_right
+    min_na = min(x, y)
+    x_na = x - min_na
+    y_na = y - min_na
 
     x_difference = (xbian - 1) - x
-    min_right_left = min(x_difference, y)
-    x_right_left = x + min_right_left
-    y_right_left = y - min_right_left
+    min_pie = min(x_difference, y)
+    x_pie = x + min_pie
+    y_pie = y - min_pie
 
     # 计算方格数↘和↙
-    while x_left_right < xbian and y_left_right < ybian:
-        diagonal_left_right += [(x_left_right, y_left_right)]
-        x_left_right += 1
-        y_left_right += 1
+    while x_na < xbian and y_na < ybian:
+        na += [(x_na, y_na)]
+        x_na += 1
+        y_na += 1
 
-    while x_right_left >= 0 and y_right_left < ybian:
-        diagonal_right_left += [(x_right_left, y_right_left)]
-        x_right_left += -1
-        y_right_left += 1
+    while x_pie >= 0 and y_pie < ybian:
+        pie += [(x_pie, y_pie)]
+        x_pie += -1
+        y_pie += 1
 
-    diagonal = list(dict.fromkeys(diagonal_left_right + diagonal_right_left))  # Remove duplicate squares
-    return diagonal
+    xie = list(dict.fromkeys(na + pie))  # Remove duplicate squares
+    return xie
 
 
 def qc_test_goal_state(state):
